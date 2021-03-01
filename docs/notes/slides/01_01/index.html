@@ -47,10 +47,14 @@
         <main class="main col col-md-6 col-lg-8">
           <!-- .slide: data-state="layout-title no-fragment"  -->
 <h1 id="css-clamp()">CSS Clamp() <a class="direct-link" href="#css-clamp()"> </a></h1>
-<p>Responsive content without media queries</p>
+<p>Responsive Content Without Media Queries</p>
+<blockquote>
+<blockquote></blockquote>
+</blockquote>
+<p>I'm really enjoying a CSS function called Clamp</p>
 <hr>
 <h1 id="css-clamp()-1">CSS Clamp() <a class="direct-link" href="#css-clamp()-1"> </a></h1>
-<pre><code>clamp(MIN, VAL, MAX);
+<pre><code class="language-css">clamp(MIN, VAL, MAX);
 </code></pre>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/clamp()" target="_blank"><code class="code-exciting">docs</code></a></p>
 <blockquote>
@@ -66,16 +70,14 @@
 <p>You can use it to limit all types of values wherever you use properties like length, frequency angles, etc. You can use measurements like percentages or any of the viewport measurements, so it's more flexible than just a hard value.</p>
 <hr>
 <h1 id="the-hero">The Hero <a class="direct-link" href="#the-hero"> </a></h1>
-<p>Say you have an hero image for your site:</p>
-<p><strong>HTML</strong></p>
 <pre><code class="language-html">&lt;img src=img.jpg&quot; alt=&quot;some image&quot;/&gt;
 </code></pre>
-<p><strong>CSS</strong></p>
 <pre><code class="language-css">width: 100%;
 </code></pre>
 <blockquote>
 <blockquote></blockquote>
 </blockquote>
+<p>Say you have an hero image for your site:</p>
 <p>To make this fit the width of the display, in CSS, you might try making the width 100%.</p>
 <p>But sometimes you don't want the image to go the full width. You might want some constraints to that width. This is where clamp() can come in handy.</p>
 <hr>
@@ -89,18 +91,6 @@
 </blockquote>
 <p>This will make the image try to be 100% of the width of the container, but also no smaller than 800 pixels and no larger than 1200 pixels.</p>
 <p>Normally, I'd take care of this by creating a div that contains the image, but clamp() is letting me put this directly on the image, so that's less, more flexible code.</p>
-<hr>
-<h1 id="with-content">With Content <a class="direct-link" href="#with-content"> </a></h1>
-<pre><code class="language-css">display: block;
-margin: 0 auto;
-width: clamp(800px, 100%, 1200px);
-</code></pre>
-<blockquote>
-<blockquote></blockquote>
-</blockquote>
-<p>Let's see  the content section of your site. That 100% width might get too big at times. Now, you can fix this with media queries, but clamp gives you a better way.</p>
-<p>I'm adding a display block and the margin rule to make sure this images centers on our layout.</p>
-<p>This rule makes the hero image cover 100% of the width of the container, but also be no smaller than 800 Pixels and no bigger than 1200 pixels. Normally I take care of this type of thing by wrapping my images in a container, but this is cleaner.</p>
 <hr>
 <h1 id="content-images">Content Images <a class="direct-link" href="#content-images"> </a></h1>
 <pre><code>float: right;
@@ -122,7 +112,19 @@ width: clamp(300px, 50%, 600px);
 <p>I'm using viewport widths here, so that's making the font responsive to the size of the browser. Just remember that 100vw means 100% of the viewport width and that would be a HUGE font size, so a fairly small size here. To me, this type of sizing is easier to read than a complex calc().</p>
 <p>It's got pretty good <a href="https://caniuse.com/?search=clamp">browser support</a>, so I think that unless you're supporting really old browsers it's something you can start using today.</p>
 <hr>
-<h1 id="finished-code">Finished Code <a class="direct-link" href="#finished-code"> </a></h1>
+<!-- .slide: data-state="layout-title" class="bg-dark"-->
+<h1 id="practice">Practice <a class="direct-link" href="#practice"> </a></h1>
+<div class="btn-group mt-3" role="group" aria-label="Basic example">
+  <a type="button" class="animate__animated animate__backInLeft btn btn-lg btn-exciting text-white" href="https://codepen.io/planetoftheweb/pen/VwmQdBv?editors=1100" target="_blank">Start</a>
+  <a type="button" class="animate__animated animate__backInRight animate__slow btn btn-lg btn-primary text-white" href="https://codepen.io/planetoftheweb/pen/vYyRpMb?editors=1100" target="_blank">End</a>
+</div>
+<blockquote>
+<blockquote></blockquote>
+</blockquote>
+<p>Here's what we did and where you can find the code in Github. Remember that the code is always at <code>raybo.org/slides_tailwind</code></p>
+<hr>
+<!-- .slide: data-visibility="hidden" -->
+<h1 id="finished-css">Finished CSS <a class="direct-link" href="#finished-css"> </a></h1>
 <pre><code>img.hero {
   display: block;
   margin: 0 auto;
@@ -166,16 +168,16 @@ width: clamp(300px, 50%, 600px);
                     <li><a href="#first-clamp">First Clamp  </a>
             		</li>
 
-                    <li><a href="#with-content">With Content  </a>
-            		</li>
-
                     <li><a href="#content-images">Content Images  </a>
             		</li>
 
                     <li><a href="#what-about-fonts%3F">What about fonts?  </a>
             		</li>
 
-                    <li><a href="#finished-code">Finished Code  </a>
+                    <li><a href="#practice">Practice  </a>
+            		</li>
+
+                    <li><a href="#finished-css">Finished CSS  </a>
             		</li>
                 </ol>
             </div>
