@@ -18,8 +18,7 @@
  *********************************************/
 
 body.reveal-viewport {
-  font-family: 'Source Sans Pro', system-ui, -apple-system, 'Segoe UI', Roboto,
-    'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji',
+  font-family: 'Source Sans Pro', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji',
     'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   font-size: 1.8em;
   font-weight: 300;
@@ -224,7 +223,6 @@ h3::selection {
 .reveal-viewport ul li ul li,
 .reveal-viewport ol li ul li {
   margin-bottom: 20px !important;
-  margin-left: -30px !important;
   list-style-type: none;
   white-space: nowrap !important;
 }
@@ -348,7 +346,6 @@ h3::selection {
 }
 
 .reveal-viewport pre > code {
-  background: var(--bs-beige);
   font-family: 'Source Code Pro', 'Courier New', Courier, monospace;
   font-size: 0.9rem;
   font-weight: 400;
@@ -403,7 +400,6 @@ h3::selection {
   white-space: nowrap;
   cursor: text;
   border-radius: 8px;
-  background: var(--bs-gray);
   color: var(--bs-light);
 }
 
@@ -452,8 +448,9 @@ h3::selection {
 /*********************************************
  * Title Slide
  *********************************************/
+
 .reveal-viewport.layout-title {
-  background: linear-gradient(to right, var(--bs-primary), var(--bs-info));
+  background: black;
 }
 
 .reveal-viewport.layout-title .slides {
@@ -467,13 +464,7 @@ h3::selection {
   color: var(--bs-light);
   letter-spacing: 0.03em;
   text-align: center;
-  font-size: calc(
-    30px + (40 - 30) *
-      (
-        (100vw - 300px) /
-          (var(--maximum-viewport-width) - var(--minimum-viewport-width))
-      )
-  );
+  font-size: calc(30px + (40 - 30) * ((100vw - 300px) / (var(--maximum-viewport-width) - var(--minimum-viewport-width))));
 }
 
 .reveal-viewport.layout-title section {
@@ -488,24 +479,25 @@ h3::selection {
 .reveal-viewport.layout-title .slides h5,
 .reveal-viewport.layout-title .slides h6 {
   margin-top: 0;
+  text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.5);
 }
 
 .reveal-viewport.layout-title .slides h1 {
   font-size: 2.2em;
-  color: var(--bs-yellow);
+  color: white;
 }
 
 .reveal-viewport.layout-title .slides h2 {
   font-size: 1.6em;
   line-height: 100%;
-  color: var(--bs-dark);
+  color: white;
   filter: contrast(0.9);
 }
 
 .reveal-viewport.layout-title p {
   font-size: 0.9em;
   margin: inherit;
-  margin: 0.5em 15%;
+  text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.5);
 }
 
 .reveal-viewport.layout-title .btn {
@@ -526,9 +518,27 @@ h3::selection {
   color: var(--bs-yellow);
 }
 
+.reveal-viewport.layout-title li {
+  font-weight: bold;
+  list-style-type: none;
+  text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.5);
+}
+
+.reveal-viewport.layout-title ul li ul li {
+  padding-left: 0 !important;
+}
+
 .reveal-viewport.layout-title li code {
-  background-color: var(--bs-warning) !important;
-  color: var(--bs-dark);
+  background-color: var(--bs-primary) !important;
+  color: white;
+  text-shadow: none;
+  font-weight: 600;
+}
+
+.reveal-viewport.layout-title li li code {
+  background-color: var(--bs-secondary) !important;
+  color: white;
+  text-shadow: none;
   font-weight: 600;
 }
 
@@ -620,13 +630,7 @@ h3::selection {
 .reveal-viewport.layout-mostly-image h1 {
   margin-left: 0.25em;
   margin-right: 0.25em;
-  font-size: calc(
-    30px + (100 - 30) *
-      (
-        (100vw - 300px) /
-          (var(--maximum-viewport-width) - var(--minimum-viewport-width))
-      )
-  );
+  font-size: calc(30px + (100 - 30) * ((100vw - 300px) / (var(--maximum-viewport-width) - var(--minimum-viewport-width))));
 }
 
 .reveal-viewport.layout-mostly-image p {
@@ -634,23 +638,11 @@ h3::selection {
   margin-left: 1em;
   margin-right: 1em;
   line-height: 120%;
-  font-size: calc(
-    15px + (50 - 15) *
-      (
-        (100vw - 300px) /
-          (var(--maximum-viewport-width) - var(--minimum-viewport-width))
-      )
-  );
+  font-size: calc(15px + (50 - 15) * ((100vw - 300px) / (var(--maximum-viewport-width) - var(--minimum-viewport-width))));
 }
 
 .reveal-viewport.layout-mostly-image small {
-  font-size: calc(
-    15px + (30 - 15) *
-      (
-        (100vw - 300px) /
-          (var(--maximum-viewport-width) - var(--minimum-viewport-width))
-      )
-  );
+  font-size: calc(15px + (30 - 15) * ((100vw - 300px) / (var(--maximum-viewport-width) - var(--minimum-viewport-width))));
 }
 
 .reveal-viewport.layout-mostly-image section li {
@@ -658,13 +650,7 @@ h3::selection {
   margin-left: 0;
   margin-right: 0;
   line-height: 110%;
-  font-size: calc(
-    22px + (50 - 22) *
-      (
-        (100vw - 300px) /
-          (var(--maximum-viewport-width) - var(--minimum-viewport-width))
-      )
-  );
+  font-size: calc(22px + (50 - 22) * ((100vw - 300px) / (var(--maximum-viewport-width) - var(--minimum-viewport-width))));
 }
 
 .reveal-viewport.layout-mostly-image ul li:first-child,
@@ -715,13 +701,7 @@ h3::selection {
  *********************************************/
 
 .footer {
-  font-size: calc(
-    20px + (30 - 20) *
-      (
-        (100vw - 300px) /
-          (var(--maximum-viewport-width) - var(--minimum-viewport-width))
-      )
-  );
+  font-size: calc(20px + (30 - 20) * ((100vw - 300px) / (var(--maximum-viewport-width) - var(--minimum-viewport-width))));
   background: var(--bs-dark);
   color: var(--bs-white);
   text-align: center;
@@ -844,27 +824,9 @@ footer.fadeout {
   color: var(--bs-light);
   list-style: none;
   margin: 0.8vmin 1vmin;
-  font-size: calc(
-    20px + (30 - 20) *
-      (
-        (100vw - 300px) /
-          (var(--maximum-viewport-width) - var(--minimum-viewport-width))
-      )
-  );
-  width: calc(
-    250px + (240 - 250) *
-      (
-        (100vw - 300px) /
-          (var(--maximum-viewport-width) - var(--minimum-viewport-width))
-      )
-  );
-  height: calc(
-    250px + (240 - 250) *
-      (
-        (100vw - 300px) /
-          (var(--maximum-viewport-width) - var(--minimum-viewport-width))
-      )
-  );
+  font-size: calc(20px + (30 - 20) * ((100vw - 300px) / (var(--maximum-viewport-width) - var(--minimum-viewport-width))));
+  width: calc(250px + (240 - 250) * ((100vw - 300px) / (var(--maximum-viewport-width) - var(--minimum-viewport-width))));
+  height: calc(250px + (240 - 250) * ((100vw - 300px) / (var(--maximum-viewport-width) - var(--minimum-viewport-width))));
   text-align: center;
   line-height: 100%;
   opacity: 0.5 !important;
@@ -1065,8 +1027,7 @@ footer.fadeout {
   background: var(--bs-royal);
   opacity: 0;
   font-family: 'Source Code Pro', 'Courier New', Courier, monospace;
-  animation: slideOutLink 1s 6.5s ease-in-out backwards,
-    slideInLink 0.7s 2s ease-in-out backwards;
+  animation: slideOutLink 1s 6.5s ease-in-out backwards, slideInLink 0.7s 2s ease-in-out backwards;
   font-size: 0.5em !important;
   display: flex !important;
   align-items: center !important;
