@@ -42,8 +42,8 @@ $green: #28a745 !default;
 $teal: #20c997 !default;
 $cyan: #1bb4cb !default;
 $beige: #edebe8 !default;
-$chroma_green: #00b140;
-$chroma_blue: #0047bb;
+$chroma_green: #00b140 !default;
+$chroma_blue: #0047bb !default;
 
 // scss-docs-start colors-map
 $colors: (
@@ -65,6 +65,8 @@ $colors: (
   'gray-darker': $gray-800,
   'gray-darkest': $gray-900,
   'beige': $beige,
+  'chroma_green': $chroma_green,
+  'chroma_blue': $chroma_blue,
 ) !default;
 // scss-docs-end colors-map
 
@@ -82,6 +84,7 @@ $cloudy: $gray-400 !default;
 $medium: $gray-600 !default;
 $dark: $gray-800 !default;
 $darker: $gray-900 !default;
+$chroma: $chroma_green !default;
 
 // scss-docs-start theme-colors-map
 $theme-colors: (

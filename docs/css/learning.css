@@ -450,7 +450,7 @@ h3::selection {
  *********************************************/
 
 .reveal-viewport.layout-title {
-  background: black;
+  background: #00b140 !important;
 }
 
 .reveal-viewport.layout-title .slides {
